@@ -13,7 +13,7 @@ Sub-second dispatch + cloud economics. One broker, two modes: best-effort pub/su
 ## ⚡ Why Danube?
 
 ### 🌩️ **Distributed Stateless Brokers**
-All metadata in ETCD, all data in WAL + object storage (S3/GCS/Azure). Zero state on brokers means effortless horizontal scaling—add or remove brokers in seconds without data migration. Infinite retention without local disk constraints.
+All metadata in ETCD, all data in WAL + object storage (S3/GCS/Azure). Zero state on brokers means effortless horizontal scaling, add or remove brokers in seconds without data migration. Infinite retention without local disk constraints.
 
 ### 🔥 **Two Speed Gears**
 - **Non-Reliable**: Zero persistence, lowest latency for real-time metrics and live telemetry
