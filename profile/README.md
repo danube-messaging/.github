@@ -1,7 +1,8 @@
 # 🌊 Danube Messaging
 
-**Cloud-native pub/sub and streaming. Built in Rust. Runs everywhere.**
+**Danube is an open-source, distributed messaging broker system, built in Rust**
 
+Danube aims to be a lightweight yet powerful, secure and scalable messaging platform, suitable for event-driven applications
 Sub-second dispatch + cloud economics. One broker, two modes: best-effort pub/sub or at-least-once streaming with WAL + object storage.
 
 [![Documentation](https://img.shields.io/badge/📖_Read_the_Docs-blue?style=for-the-badge)](https://danube-docs.dev-state.com/)
@@ -11,8 +12,8 @@ Sub-second dispatch + cloud economics. One broker, two modes: best-effort pub/su
 
 ## ⚡ Why Danube?
 
-### 🌩️ **Cloud-Native by Design**
-Stateless brokers + WAL + object storage (S3/GCS/Azure). Infinite retention without local disk constraints. Add brokers in seconds, scale partitions automatically.
+### 🌩️ **Distributed Stateless Brokers**
+All metadata in ETCD, all data in WAL + object storage (S3/GCS/Azure). Zero state on brokers means effortless horizontal scaling—add or remove brokers in seconds without data migration. Infinite retention without local disk constraints.
 
 ### 🔥 **Two Speed Gears**
 - **Non-Reliable**: Zero persistence, lowest latency for real-time metrics and live telemetry
@@ -46,22 +47,6 @@ Centralized schema management with versioning and compatibility checking. Suppor
 ### Integration Framework
 - **[danube-connect](https://github.com/danube-messaging/danube-connect)** - Connector ecosystem  
   _Plug-and-play integrations with external systems_
-
----
-
-## 🚀 Quick Start
-
-Deploy a cluster in 60 seconds with Docker Compose:
-
-```bash
-curl -O https://raw.githubusercontent.com/danube-messaging/danube/main/docker/docker-compose.yml
-docker-compose up -d
-```
-
-Includes: 2 HA brokers, ETCD, MinIO S3 storage, and CLI tools.
-
-**[→ Full Docker Setup Guide](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/)**
-
 ---
 
 ## 📚 Learn More
@@ -86,6 +71,6 @@ Includes: 2 HA brokers, ETCD, MinIO S3 storage, and CLI tools.
 
 **Built with 🦀 Rust • Designed for ☁️ Cloud • Made for 🚀 Scale**
 
-[GitHub](https://github.com/danube-messaging) • [Docs](https://danube-docs.dev-state.com/) • [Discord](https://discord.gg/your-invite)
+[GitHub](https://github.com/danube-messaging) • [Docs](https://danube-docs.dev-state.com/)
 
 </div>
