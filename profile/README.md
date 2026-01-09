@@ -31,7 +31,7 @@ Framework for integration with external systems—MQTT, databases, Kafka, ClickH
 
 - **[danube](https://github.com/danube-messaging/danube)** - The messaging broker, a lightweight, cloud‑native messaging platform built in Rust.
 - **[danube-client](https://github.com/danube-messaging/danube/tree/main/danube-client)** - Danube Rust client library (SDK)  
-- **[danube-go](https://github.com/danube-messaging/danube-go)** - DAnube Go client library (SDK)
+- **[danube-go](https://github.com/danube-messaging/danube-go)** - Danube Go client library (SDK)
   
 - **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** - Core SDK for building high-performance connectors
 - **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** - Available connectors for Danube Messaging
