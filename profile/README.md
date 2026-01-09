@@ -22,39 +22,34 @@ All metadata in ETCD, all data in WAL + object storage (S3/GCS/Azure). Zero stat
 ### 🔐 **Schema Registry Built-In**
 Centralized schema management with versioning and compatibility checking. Support for JSON Schema, Avro, and Protobuf. Prevent invalid messages before they reach consumers.
 
-### 🔌 **Plug-and-Play Connectors**
-[**Danube Connect**](https://github.com/danube-messaging/danube-connect) framework for integration with external systems—MQTT, databases, Kafka, ClickHouse, vector DBs, and more. Pure Rust, isolated from broker.
+### 🔌 **Plug-and-Play Connector SDK**
+Framework for integration with external systems—MQTT, databases, Kafka, ClickHouse, vector DBs, and more. Pure Rust, isolated from broker.
 
 ---
 
 ## 🏗️ The Danube Ecosystem
 
-### Core Platform
-- **[danube](https://github.com/danube-messaging/danube)** - The messaging broker (Rust)  
-  _Stateless, cloud-native, with WAL + object storage persistence_
-
-### Client Libraries
-- **[danube-client](https://github.com/danube-messaging/danube/tree/main/danube-client)** - Rust client library  
-  _Async, type-safe, with full Schema Registry support_
+- **[danube](https://github.com/danube-messaging/danube)** - The messaging broker, a lightweight, cloud‑native messaging platform built in Rust.
+- **[danube-client](https://github.com/danube-messaging/danube/tree/main/danube-client)** - Danube Rust client library (SDK)  
+- **[danube-go](https://github.com/danube-messaging/danube-go)** - DAnube Go client library (SDK)
   
-- **[danube-go](https://github.com/danube-messaging/danube-go)** - Go client library  
-  _Simple, idiomatic Go API for producers and consumers_
+- **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** - Core SDK for building high-performance connectors
+- **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** - Available connectors for Danube Messaging
 
-### Admin & Monitoring
+- **[danube-cli](https://github.com/danube-messaging/danube/tree/main/danube-cli)** - Command-line companion for interacting with Danube messaging system
+- **[danube-admin-cli](https://github.com/danube-messaging/danube/tree/main/danube-admin-cli)** - Command-line interface designed to manage the Danube cluster
+
 - **[danube-admin-ui](https://github.com/danube-messaging/danube-admin-ui)** - Web UI for cluster management  
-  _React-based dashboard for brokers, topics, and subscriptions_
+- **[danube-admin-gateway](https://github.com/danube-messaging/danube/tree/main/danube-admin-gateway)** - A Backend-for-Frontend (BFF) service that provides a unified HTTP/JSON API for the Danube Admin UI
 
-### Integration Framework
-- **[danube-connect](https://github.com/danube-messaging/danube-connect)** - Connector ecosystem  
-  _Plug-and-play integrations with external systems_
----
+
 
 ## 📚 Learn More
 
 - **[Documentation](https://danube-docs.dev-state.com/)** - Architecture, concepts, and guides
 - **[Getting Started](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/)** - Deploy your first cluster
-- **[Client Libraries](https://danube-docs.dev-state.com/client_libraries/producer-basics/)** - Rust and Go SDKs
-- **[Schema Registry](https://danube-docs.dev-state.com/architecture/schema_registry_architecture/)** - Type-safe messaging
+- **[Client Libraries](https://danube-docs.dev-state.com/client_libraries/setup/)** - Rust and Go SDKs
+- **[Schema Registry](https://danube-docs.dev-state.com/concepts/schema_registry_guide/)** - Type-safe messaging
 
 ---
 
