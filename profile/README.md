@@ -11,19 +11,25 @@ Sub-second dispatch + cloud economics. One broker, two modes: best-effort pub/su
 ---
 
 ## ⚡ Why Danube?
+ 
+### 🌩️ **Cloud-Native Stateless Architecture**
+Zero broker state—metadata in ETCD, data in WAL + S3/GCS/Azure. Scale horizontally in seconds without data migration. Add or remove brokers instantly. Infinite retention without local disk limits. True cloud economics.
+ 
+### 🎯 **Self-Optimizing Clusters**
+Intelligent load management continuously monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker. Workload changes? The cluster adapts without manual intervention.
 
-### 🌩️ **Distributed Stateless Brokers**
-All metadata in ETCD, all data in WAL + object storage (S3/GCS/Azure). Zero state on brokers means effortless horizontal scaling, add or remove brokers in seconds without data migration. Infinite retention without local disk constraints.
+### 🤖 **AI-Native Administration**
+Manage your cluster through natural language with Claude, Cursor, or Windsurf. 32 intelligent tools accessible via Model Context Protocol (MCP), create topics, analyze lag, troubleshoot issues, query metrics, all by conversation. CLI, Web UI, or AI: your choice.
 
-### 🔥 **Two Speed Gears**
-- **Non-Reliable**: Zero persistence, lowest latency for real-time metrics and live telemetry
-- **Reliable**: At-least-once delivery with WAL + cloud persistence for critical workloads
-
-### 🔐 **Schema Registry Built-In**
-Centralized schema management with versioning and compatibility checking. Support for JSON Schema, Avro, and Protobuf. Prevent invalid messages before they reach consumers.
-
-### 🔌 **Plug-and-Play Connector SDK**
-Framework for integration with external systems—MQTT, databases, Kafka, ClickHouse, vector DBs, and more. Pure Rust, isolated from broker.
+### 🔥 **Two-Speed Dispatch**
+- **Non-Reliable**: Zero persistence, sub-millisecond latency for real-time metrics and live telemetry
+- **Reliable**: At-least-once delivery with WAL + cloud durability for critical workloads
+ 
+### 📋 **Built-In Schema Registry**
+Centralized schema versioning with compatibility enforcement across JSON Schema, Avro, and Protobuf. Prevent schema drift and invalid messages before they reach consumers. Single source of truth for your data contracts.
+ 
+### 🔌 **Pure Rust Connector SDK**
+Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector databases, and more. Framework isolated from broker core—build connectors without touching cluster internals.
 
 ---
 
@@ -37,8 +43,6 @@ Framework for integration with external systems—MQTT, databases, Kafka, ClickH
 - **[danube-cli](https://github.com/danube-messaging/danube/tree/main/danube-cli)** - Command-line companion for interacting with Danube messaging system
 - **[danube-admin-cli](https://github.com/danube-messaging/danube/tree/main/danube-admin-cli)** - Command-line interface designed to manage the Danube cluster
 - **[danube-admin-ui](https://github.com/danube-messaging/danube-admin-ui)** - Web UI for cluster management  
-
-
 
 ## 📚 Learn More
 
