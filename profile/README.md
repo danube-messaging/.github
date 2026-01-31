@@ -41,8 +41,7 @@ Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector datab
 - **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** - Core SDK for building high-performance connectors
 - **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** - Available connectors for Danube Messaging
 - **[danube-cli](https://github.com/danube-messaging/danube/tree/main/danube-cli)** - Command-line companion for interacting with Danube messaging system
-- **[danube-admin-cli](https://github.com/danube-messaging/danube/tree/main/danube-admin-cli)** - Command-line interface designed to manage the Danube cluster
-- **[danube-admin-ui](https://github.com/danube-messaging/danube-admin-ui)** - Web UI for cluster management  
+- **[danube-admin](https://github.com/danube-messaging/danube/tree/main/danube-admin-cli)** - Unified admin tool (CLI + AI/MCP + Web UI)
 
 ## 📚 Learn More
 
