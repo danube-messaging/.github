@@ -36,12 +36,16 @@ Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector datab
 ## 🏗️ The Danube Ecosystem
 
 - **[danube](https://github.com/danube-messaging/danube)** - The messaging broker, a lightweight, cloud‑native messaging platform built in Rust.
-- **[danube-client](https://github.com/danube-messaging/danube/tree/main/danube-client)** - Danube Rust client library (SDK)  
-- **[danube-go](https://github.com/danube-messaging/danube-go)** - Danube Go client library (SDK)
 - **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** - Core SDK for building high-performance connectors
 - **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** - Available connectors for Danube Messaging
 - **[danube-cli](https://github.com/danube-messaging/danube/tree/main/danube-cli)** - Command-line companion for interacting with Danube messaging system
 - **[danube-admin](https://github.com/danube-messaging/danube/tree/main/danube-admin-cli)** - Unified admin tool (CLI + AI/MCP + Web UI)
+
+## 📦 Client Libraries
+- 🦀 **[danube-client](https://github.com/danube-messaging/danube/tree/main/danube-client)** - Danube Rust client library (SDK)
+- 🐹 **[danube-go](https://github.com/danube-messaging/danube-go)** - Danube Go client library (SDK)
+- ♨️ **[danube-java](https://github.com/danube-messaging/danube-java)** - Danube Java client library (SDK)
+- 🐍 **[danube-py](https://github.com/danube-messaging/danube-py)** - Danube Python client library (SDK)   
 
 ## 📚 Learn More
 
