@@ -2,8 +2,8 @@
 
 **Danube is an open-source, distributed messaging broker system, built in Rust**
 
-Danube aims to be a lightweight yet powerful, secure and scalable messaging platform, suitable for event-driven applications
-Sub-second dispatch + cloud economics. One broker, two modes: best-effort pub/sub or at-least-once streaming with WAL + object storage.
+Danube aims to be a lightweight yet powerful, secure and scalable messaging platform, suitable for event-driven applications. 
+Sub-second dispatch + cloud economics. Self-contained brokers with embedded Raft consensus. Two modes: best-effort pub/sub or at-least-once streaming with WAL + object storage
 
 [![Documentation](https://img.shields.io/badge/📖_Read_the_Docs-blue?style=for-the-badge)](https://danube-docs.dev-state.com/)
 [![Quick Start](https://img.shields.io/badge/🚀_Docker_Quick_Start-green?style=for-the-badge)](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/)
@@ -13,7 +13,8 @@ Sub-second dispatch + cloud economics. One broker, two modes: best-effort pub/su
 ## ⚡ Why Danube?
  
 ### 🌩️ **Cloud-Native Stateless Architecture**
-Zero broker state—metadata in ETCD, data in WAL + S3/GCS/Azure. Scale horizontally in seconds without data migration. Add or remove brokers instantly. Infinite retention without local disk limits. True cloud economics.
+Zero external dependencies, metadata replicated across brokers via embedded Raft consensus (openraft), data in WAL + S3/GCS/Azure. Scale horizontally in seconds without data migration.
+Add or remove brokers with minimal disruption. Infinite retention without local disk limits using opendal.
  
 ### 🎯 **Self-Optimizing Clusters**
 Intelligent load management continuously monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker. Workload changes? The cluster adapts without manual intervention.
