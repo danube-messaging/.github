@@ -9,29 +9,26 @@ Sub-second dispatch + cloud economics. Self-contained brokers with embedded Raft
 [![Quick Start](https://img.shields.io/badge/🚀_Docker_Quick_Start-green?style=for-the-badge)](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/)
 
 ---
-
 ## ⚡ Why Danube?
  
-### 🌩️ **Cloud-Native Stateless Architecture**
-Zero external dependencies, metadata replicated across brokers via embedded Raft consensus (openraft), data in WAL + S3/GCS/Azure. Scale horizontally in seconds without data migration.
-Add or remove brokers with minimal disruption. Infinite retention without local disk limits using opendal.
+### 🌩️ **Self-Contained Architecture**
+Zero external dependencies — metadata replicated across brokers via embedded Raft consensus (openraft), data persisted in a local WAL with pluggable durable storage (local disk, shared filesystem, or S3/GCS/Azure via OpenDAL). Scale horizontally by adding brokers; topics rebalance automatically with durable history accessible from any node in shared-storage modes.
  
 ### 🎯 **Self-Optimizing Clusters**
 Intelligent load management continuously monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker. Workload changes? The cluster adapts without manual intervention.
 
 ### 🤖 **AI-Native Administration**
-Manage your cluster through natural language with Claude, Cursor, or Windsurf. 32 intelligent tools accessible via Model Context Protocol (MCP), create topics, analyze lag, troubleshoot issues, query metrics, all by conversation. CLI, Web UI, or AI: your choice.
+Manage your cluster through natural language with Claude, Cursor, or Windsurf. Intelligent tools accessible via Model Context Protocol (MCP): create topics, analyze lag, troubleshoot issues, query metrics, all by conversation. CLI, Web UI, or AI: your choice.
 
 ### 🔥 **Two-Speed Dispatch**
 - **Non-Reliable**: Zero persistence, sub-millisecond latency for real-time metrics and live telemetry
-- **Reliable**: At-least-once delivery with WAL + cloud durability for critical workloads
+- **Reliable**: At-least-once delivery with WAL persistence, optionally backed by cloud durable storage for cross-broker history and infinite retention
  
 ### 📋 **Built-In Schema Registry**
 Centralized schema versioning with compatibility enforcement across JSON Schema, Avro, and Protobuf. Prevent schema drift and invalid messages before they reach consumers. Single source of truth for your data contracts.
  
 ### 🔌 **Pure Rust Connector SDK**
-Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector databases, and more. Framework isolated from broker core—build connectors without touching cluster internals.
-
+Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector databases, and more. Framework isolated from broker core, build connectors without touching cluster internals.
 ---
 
 ## 🏗️ The Danube Ecosystem
