@@ -12,7 +12,7 @@ Sub-second dispatch + cloud economics. Self-contained brokers with embedded Raft
 ## ⚡ Why Danube?
  
 ### 🌩️ **Self-Contained Architecture**
-Zero external dependencies — metadata replicated across brokers via embedded Raft consensus (openraft), data persisted in a local WAL with pluggable durable storage (local disk, shared filesystem, or S3/GCS/Azure via OpenDAL). Scale horizontally by adding brokers; topics rebalance automatically with durable history accessible from any node in shared-storage modes.
+Zero external dependencies, metadata replicated across brokers via embedded Raft consensus (openraft), data persisted in a local WAL with pluggable durable storage (local disk, shared filesystem, or S3/GCS/Azure via OpenDAL). Scale horizontally by adding brokers; topics rebalance automatically with durable history accessible from any node in shared-storage modes.
  
 ### 🎯 **Self-Optimizing Clusters**
 Intelligent load management continuously monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker. Workload changes? The cluster adapts without manual intervention.
