@@ -29,6 +29,7 @@ Centralized schema versioning with compatibility enforcement across JSON Schema,
  
 ### 🔌 **Pure Rust Connector SDK**
 Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector databases, and more. Framework isolated from broker core, build connectors without touching cluster internals.
+
 ---
 
 ## 🏗️ The Danube Ecosystem
