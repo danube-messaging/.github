@@ -21,17 +21,12 @@ Danube is a lightweight, cloud-native messaging broker with embedded Raft consen
 
 ## ✨ Highlights
 
-🔥 **Two-speed dispatch** : non-reliable (sub-millisecond, zero persistence) or reliable (at-least-once with WAL + cloud storage)
-
-📋 **Schema registry** : JSON Schema, Avro with versioning and compatibility enforcement
-
-🤖 **AI-native admin** : manage your cluster via natural language through [MCP](https://danube-docs.dev-state.com/danube_admin/ai_admin_assistant/) (Claude, Cursor, etc)
-
-🏗️ **Cluster resilience** : automatic leader election, failover, and topic reconciliation on restart. Scale horizontally by adding brokers with zero downtime
-
-🎯 **Self-optimizing clusters** : intelligent load management that monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker
-
-🔌 **Connector SDK** : plug-and-play integrations with databases, Kafka, ClickHouse, and more via [Danube Connect](https://github.com/danube-messaging/danube-connectors)
+* **Two-speed dispatch** : non-reliable (sub-millisecond, zero persistence) or reliable (at-least-once with WAL + cloud storage)
+* **Schema registry** : JSON Schema, Avro with versioning and compatibility enforcement
+* **AI-native admin** : manage your cluster via natural language through [MCP](https://danube-docs.dev-state.com/danube_admin/ai_admin_assistant/) (Claude, Cursor, etc)
+* **Cluster resilience** : automatic leader election, failover, and topic reconciliation on restart. Scale horizontally by adding brokers with zero downtime
+* **Self-optimizing clusters** : intelligent load management that monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker
+* **Connector SDK** : plug-and-play integrations with databases, Kafka, ClickHouse, and more via [Danube Connect](https://github.com/danube-messaging/danube-connectors)
 
 ---
 
