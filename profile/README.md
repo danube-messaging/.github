@@ -1,73 +1,58 @@
 # 🌊 Danube Messaging
 
-**Danube is an open-source, distributed messaging broker system, built in Rust**
+**An open-source messaging platform built in Rust. Zero external dependencies.**
 
-Danube aims to be a lightweight yet powerful, secure and scalable messaging platform, suitable for event-driven applications. 
-Sub-second dispatch + cloud economics. Self-contained brokers with embedded Raft consensus. Two modes: best-effort pub/sub or at-least-once streaming with WAL + object storage
+Danube is a lightweight, cloud-native messaging broker with embedded Raft consensus for metadata replication. One binary, three deployment modes: **standalone** for development, **cluster** for production, and **edge** for MQTT-to-cloud IoT ingestion.
 
 [![Documentation](https://img.shields.io/badge/📖_Read_the_Docs-blue?style=for-the-badge)](https://danube-docs.dev-state.com/)
-[![Quick Start](https://img.shields.io/badge/🚀_Docker_Quick_Start-green?style=for-the-badge)](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/)
-
----
-## ⚡ Why Danube?
- 
-### 🌩️ **Self-Contained Architecture**
-Zero external dependencies, metadata replicated across brokers via embedded Raft consensus (openraft), data persisted in a local WAL with pluggable durable storage (shared filesystem, or S3/GCS/Azure via OpenDAL). Scale horizontally by adding brokers; topics rebalance automatically with durable history accessible from any node in shared-storage modes.
- 
-### 🎯 **Self-Optimizing Clusters**
-Intelligent load management continuously monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker. Workload changes? The cluster adapts without manual intervention.
-
-### 🤖 **AI-Native Administration**
-Manage your cluster through natural language with Claude, Cursor, or Windsurf. Intelligent tools accessible via Model Context Protocol (MCP): create topics, analyze lag, troubleshoot issues, query metrics, all by conversation. CLI, Web UI, or AI: your choice.
-
-### 🔥 **Two-Speed Dispatch**
-- **Non-Reliable**: Zero persistence, sub-millisecond latency for real-time metrics and live telemetry
-- **Reliable**: At-least-once delivery with WAL persistence, optionally backed by cloud durable storage for cross-broker history and infinite retention
- 
-### 📋 **Built-In Schema Registry**
-Centralized schema versioning with compatibility enforcement across JSON Schema, Avro, and Protobuf. Prevent schema drift and invalid messages before they reach consumers. Single source of truth for your data contracts.
- 
-### 🔌 **Pure Rust Connector SDK**
-Plug-and-play integrations with MQTT, databases, Kafka, ClickHouse, vector databases, and more. Framework isolated from broker core, build connectors without touching cluster internals.
+[![Quick Start](https://img.shields.io/badge/🚀_Try_it_Now-green?style=for-the-badge)](https://danube-docs.dev-state.com/getting_started/Broker_modes/)
 
 ---
 
-## 🏗️ The Danube Ecosystem
+## ⚡ Three Ways to Run
 
-- **[danube](https://github.com/danube-messaging/danube)** - The messaging broker, a lightweight, cloud‑native messaging platform built in Rust.
-- **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** - Core SDK for building high-performance connectors
-- **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** - Available connectors for Danube Messaging
-- **[danube-cli](https://github.com/danube-messaging/danube/tree/main/danube-cli)** - Command-line companion for interacting with Danube messaging system
-- **[danube-admin](https://github.com/danube-messaging/danube/tree/main/danube-admin-cli)** - Unified admin tool (CLI + AI/MCP + Web UI)
+🖥️ **Standalone** : single broker, zero config. Download the [binary](https://github.com/danube-messaging/danube/releases) and run `danube-broker --mode standalone --data-dir ./data`
+
+🌐 **Cluster** : multi-broker with Raft consensus, automated topic rebalancing, and horizontal scaling. Deploy with [Docker Compose](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/) or [Kubernetes](https://danube-docs.dev-state.com/getting_started/Danube_kubernetes/)
+
+🏭 **Edge** : MQTT gateway that ingests IoT device data, validates payloads against schemas, buffers in a local WAL, and replicates to the cluster. Designed for factory floors and remote sites where devices speak MQTT and need resilient delivery to a central platform
+
+---
+
+## ✨ Highlights
+
+🔥 **Two-speed dispatch** : non-reliable (sub-millisecond, zero persistence) or reliable (at-least-once with WAL + cloud storage)
+
+📋 **Schema registry** : JSON Schema, Avro with versioning and compatibility enforcement
+
+🤖 **AI-native admin** : manage your cluster via natural language through [MCP](https://danube-docs.dev-state.com/danube_admin/ai_admin_assistant/) (Claude, Cursor, etc)
+
+🏗️ **Cluster resilience** : automatic leader election, failover, and topic reconciliation on restart. Scale horizontally by adding brokers with zero downtime
+
+🎯 **Self-optimizing clusters** : intelligent load management that monitors broker health and automatically rebalances topics to prevent hotspots. New topics land on the least-loaded broker
+
+🔌 **Connector SDK** : plug-and-play integrations with databases, Kafka, ClickHouse, and more via [Danube Connect](https://github.com/danube-messaging/danube-connectors)
+
+---
+
+## 🏗️ Ecosystem
+
+- **[danube](https://github.com/danube-messaging/danube)** : messaging broker (standalone, cluster, and edge modes)
+- **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** : core SDK for building connectors
+- **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** : available connectors
 
 ## 📦 Client Libraries
-- 🦀 **[danube-client](https://github.com/danube-messaging/danube/tree/main/danube-client)** - Danube Rust client library (SDK)
-- 🐹 **[danube-go](https://github.com/danube-messaging/danube-go)** - Danube Go client library (SDK)
-- ♨️ **[danube-java](https://github.com/danube-messaging/danube-java)** - Danube Java client library (SDK)
-- 🐍 **[danube-py](https://github.com/danube-messaging/danube-py)** - Danube Python client library (SDK)   
+
+- **[Rust](https://github.com/danube-messaging/danube/tree/main/danube-client)** · **[Go](https://github.com/danube-messaging/danube-go)** · **[Java](https://github.com/danube-messaging/danube-java)** · **[Python](https://github.com/danube-messaging/danube-py)**
+
+Contributions for other languages are welcome!
 
 ## 📚 Learn More
 
-- **[Documentation](https://danube-docs.dev-state.com/)** - Architecture, concepts, and guides
-- **[Getting Started](https://danube-docs.dev-state.com/getting_started/Danube_docker_compose/)** - Deploy your first cluster
-- **[Client Libraries](https://danube-docs.dev-state.com/client_libraries/setup/)** - Rust and Go SDKs
-- **[Schema Registry](https://danube-docs.dev-state.com/concepts/schema_registry_guide/)** - Type-safe messaging
+**[Documentation](https://danube-docs.dev-state.com/)** · **[Getting Started](https://danube-docs.dev-state.com/getting_started/Broker_modes/)** · **[Architecture](https://danube-docs.dev-state.com/architecture/architecture/)** · **[Schema Registry](https://danube-docs.dev-state.com/concepts/schema_registry_guide/)**
 
 ---
 
 ## 🤝 Get Involved
 
-- **⭐ Star the repo** - Show your support!
-- **🐛 Report issues** - Help us improve
-- **💡 Contribute** - PRs welcome across all repos
-- **📣 Join discussions** - Share ideas and feedback
-
----
-
-<div align="center">
-
-**Built with 🦀 Rust • Designed for ☁️ Cloud • Made for 🚀 Scale**
-
-[GitHub](https://github.com/danube-messaging) • [Docs](https://danube-docs.dev-state.com/)
-
-</div>
+⭐ **Star the repo** · 🐛 **[Report issues](https://github.com/danube-messaging/danube/issues)** · 💡 **Contribute** (PRs welcome across all repos)
