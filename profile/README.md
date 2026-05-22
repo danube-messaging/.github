@@ -1,4 +1,4 @@
-# 🌊 Danube Messaging
+# Danube Messaging
 
 **An open-source messaging platform built in Rust. Zero external dependencies.**
 
