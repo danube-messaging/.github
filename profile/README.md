@@ -1,8 +1,8 @@
 # Danube Messaging
 
-**An open-source messaging platform built in Rust. Zero external dependencies.**
+**An open-source pub/sub and streaming platform built in Rust. Zero external dependencies.**
 
-Danube is a lightweight, cloud-native messaging broker with embedded Raft consensus for metadata replication. One binary, three deployment modes: **standalone** for development, **cluster** for production, and **edge** for MQTT-to-cloud IoT ingestion.
+Danube is a self-contained messaging platform with embedded Raft consensus for metadata replication. Secure by default with TLS/mTLS, JWT authentication, and fine-grained RBAC. Run it as **standalone** for development, **cluster** for production, or **edge** for MQTT-to-cloud IoT ingestion. One binary, three modes.
 
 [![Documentation](https://img.shields.io/badge/📖_Read_the_Docs-blue?style=for-the-badge)](https://danube-docs.dev-state.com/)
 [![Quick Start](https://img.shields.io/badge/🚀_Try_it_Now-green?style=for-the-badge)](https://danube-docs.dev-state.com/getting_started/Broker_modes/)
