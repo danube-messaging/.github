@@ -33,6 +33,7 @@ Danube is a self-contained messaging platform with embedded Raft consensus for m
 ## 🏗️ Ecosystem
 
 - **[danube](https://github.com/danube-messaging/danube)** : messaging broker (standalone, cluster, and edge modes)
+- **[danube-admin-ui](https://github.com/danube-messaging/danube-admin-ui)** : a modern, responsive web dashboard to manage the Danube cluster from the UI
 - **[danube-connect-core](https://github.com/danube-messaging/danube-connect-core)** : core SDK for building connectors
 - **[danube-connectors](https://github.com/danube-messaging/danube-connectors)** : available connectors
 
